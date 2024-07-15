@@ -1,0 +1,60 @@
+@use '@angular/material' as mat;
+@import "./app/styles/variables.scss";
+
+$theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  )
+));
+.example-container {
+  margin-left: 8px;
+}
+
+.example-card {
+  max-width: 300px;
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+body {
+  @include mat.all-component-themes($theme);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($theme);
+
+html,
+body,
+app-root {
+  height: 70%;
+  background-color: rgb(187, 207, 207);
+}
+
+app-form {
+  background-color: rgb(187, 207, 207);
+  align-items: center;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}

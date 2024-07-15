@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+.end {
+    color: rgb(65, 66, 64);
+}
+.text {
+    padding: 20px;
+}

@@ -1,0 +1,46 @@
+<div class="form">
+    <h2 class="text">Want to run with a pup?</h2>
+    <h2 class="text">SignUp Below!</h2>
+
+    <div class="formTwo">
+        <div>
+            <mat-form-field>
+                <h3 class="label">Name:</h3>
+                <input matInput placeholder="Enter your name" class="input">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field>
+                <h3 class="label">Email:</h3>
+            <input
+                matInput
+                placeholder="Enter your email"
+                [formControl]="email"
+                (blur)="updateErrorMessage()"
+                required
+                class="input"
+            />
+            @if (email.invalid) {
+                <mat-error>{{errorMessage()}}</mat-error>
+            }
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <h3 class="label">Select Pup:</h3>
+                <mat-select class="input">
+                    <mat-option value="one">Bruno</mat-option>
+                    <mat-option value="two">Milo</mat-option>
+                    <mat-option value="three">Roxy</mat-option>
+                    <mat-option value="four">Popco</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="">
+            <h3 class="text">Tell us about you!</h3>
+            <textarea style=" width: 300px; height: 300px;"  class="textarea"></textarea>
+        </div>
+        <button class="btn">Submit</button>
+    </div>
+</div>

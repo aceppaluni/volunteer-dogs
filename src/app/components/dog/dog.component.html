@@ -1,0 +1,22 @@
+<div class="row gap-1 wrapper">
+    @for (dog of dogs; track dog) {
+    <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{dog.name}} </mat-card-title>
+          <mat-card-subtitle>Age: {{dog.age}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{dog.image}} alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>{{dog.dob}}</p>
+            <p>{{dog.gender}}</p>
+            <p>{{dog.breed}}</p>
+          <p>{{dog.bio}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    }
+</div>
+
